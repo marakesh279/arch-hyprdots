@@ -1,0 +1,51 @@
+{
+    // General Settings
+    "layer": "top",
+    "margin-bottom": 0,
+    "layer": "top",
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 0,
+    // Position TOP
+    "layer": "top",
+    "margin-bottom": 2,
+    "margin-left": 20,
+    "margin-right": 20,
+    "margin-top": 5,
+    "layer": "top",
+    "margin-left": 5,
+    "margin-right": 5,
+    "spacing": 0,
+
+    // Load Modules
+    "include": [
+        ".config/waybar/modules.json",
+    ],
+    // Modules Left
+    "modules-left": [
+        "custom/cava",
+        "hyprland/workspaces",
+        "custom/ws-window"
+    ],
+    // Modules Center
+    "modules-center": [
+        "custom/spotify",
+        "clock",
+    ],
+    // Modules Right    
+    "modules-right": [
+        
+        "wireplumber",
+        "backlight",
+        "hyprland/language",
+        "battery",
+        "custom/exit",
+        "keyboard-layout"
+    ]
+} 
+
+
+
+
+
+

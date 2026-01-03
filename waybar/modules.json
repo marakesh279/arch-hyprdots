@@ -1,0 +1,119 @@
+{
+    "layer": "top",
+    "position": "top",
+    // ---------- MODULES ORDER ----------
+    "modules-left": ["custom/ws-window"],
+    "modules-center": ["custom/waybar-media"],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "disk",
+        "battery",
+        "hyprland/language",
+        "custom/pipewire",
+        "custom/playerprevious",
+        "custom/playerpause",
+        "custom/playernext",
+        "custom/spotify",
+        "clock",
+        "custom/exit"
+    ],
+    // ---------- CUSTOM WORKSPACE + WINDOW ----------
+    "custom/ws-window": {
+        "return-type": "json",
+        "exec": "$HOME/.config/waybar/scripts/ws-window.sh",
+        "interval": 1,
+        "tooltip": false
+    },
+    // ---------- POWER MENU ----------
+    "custom/exit": {
+        "format": "",
+        "on-click": "wlogout",
+        "tooltip": false
+    },
+    // ---------- CLOCK ----------
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%R %a %d %b}",
+        "on-click": "ags -t calendar",
+        "tooltip": false
+    },
+    // ---------- LANGUAGE ----------
+    "hyprland/language": {
+        "format": "{}",
+        "format-ru": "ru",
+        "format-en": "us",
+        
+        "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+    },
+    // ---------- BATTERY ----------
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-alt": "{icon}{time}",
+        "format-icons": [" ", " ", " ", " ", " "]
+    },
+    //-----------CAVA------------
+    "custom/cava": {
+        "exec": "~/.config/waybar/scripts/cava.sh",
+        "interval": 0.1,
+        "return-type": "raw",
+        "format": "{}",
+        "tooltip": false
+    },
+    // ---------- backlight ----------
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}  {percent}%",
+        "format-icons": ["󰃞", "󰃝", "󰃠"],
+
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-",
+        "tooltip": false
+    },
+    //---------------------------------
+    "wireplumber": {
+        "interval": "once",
+        "format": "{icon}{volume}%",
+        "format-muted": "",
+        "format-icons": {
+        "default": ["", "", " "]
+        },
+        "scroll-step": 5,
+        "on-click": "pavucontrol",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "tooltip-format": "Playing at {volume}%"
+    },
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+

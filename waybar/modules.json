@@ -76,7 +76,7 @@
         "on-scroll-down": "brightnessctl set 5%-",
         "tooltip": false
     },
-    //---------------------------------
+    //---------------- звук -----------------
     "wireplumber": {
         "interval": "once",
         "format": "{icon}{volume}%",
@@ -89,6 +89,20 @@
         "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "tooltip-format": "Playing at {volume}%"
     },
+    //-------------- network(иконка интернета)----------------
+    "network": {
+    
+        "format-wifi": " 󰁅{bandwidthDownBytes:>7}{bandwidthUpBytes:>7}",
+        "format-ethernet": "󰈀  {ipaddr}",
+        "format-disconnected": "󰖪  Offline",
+        "tooltip-format": "{ifname} via {gwaddr}\n{ipaddr}",
+        "interval": 5,
+        "on-click": "networkmanager_dmenu --display-wifi-strength --password-prompt rofi -r 'rofi -theme ~/.config/rofi/wifi.rasi'"
+
+
+
+        
+}
 
 
 

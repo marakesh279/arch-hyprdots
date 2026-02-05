@@ -38,6 +38,7 @@
         "wireplumber",
         "backlight",
         "hyprland/language",
+        "network",
         "battery",
         "custom/exit",
         "keyboard-layout"
